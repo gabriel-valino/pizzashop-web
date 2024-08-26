@@ -27,7 +27,7 @@ export function OrderTableFilters() {
 
   const orderId = searchParams.get('orderId')
   const customerName = searchParams.get('customerName')
-  const status = searchParams.get('statuss')
+  const status = searchParams.get('status')
 
   const { register, handleSubmit, control, reset } =
     useForm<OrderFiltersSchema>({
@@ -119,7 +119,7 @@ export function OrderTableFilters() {
               <SelectContent>
                 <SelectItem value="all">Todos status</SelectItem>
                 <SelectItem value="pending">Pendente</SelectItem>
-                <SelectItem value="cancel">Cancelado</SelectItem>
+                <SelectItem value="canceled">Cancelado</SelectItem>
                 <SelectItem value="processing">Em preparo</SelectItem>
                 <SelectItem value="delivering">Em entrega</SelectItem>
                 <SelectItem value="delivered">Entregue</SelectItem>
